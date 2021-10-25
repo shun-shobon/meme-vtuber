@@ -1,19 +1,24 @@
 {
-  "name": "meme-client",
+  "name": "meme-vtuber-client",
   "version": "0.0.0",
-  "description": "",
-  "author": "Shuntaro Nishizawa <me@shun.technology> (https://github.com/shun-shobon)",
+  "description": "VTuber web application with JINS MEME",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shun-shobon/meme-vtuber.git"
+  },
+  "author": "Shuntaro Nishizawa <me@shun.technology>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shun-shobon/meme-vtuber/issues"
+  },
+  "homepage": "https://github.com/shun-shobon/meme-vtuber#readme",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "start": "vite preview",
     "build": "vite build",
-    "serve": "vite serve",
-    "check": "run-p check:*",
-    "check:type": "tsc",
-    "check:format": "prettier --check --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,html,css,sass,scss}\"",
-    "fix": "run-p fix:*",
-    "fix:format": "prettier --write --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,html,css,sass,scss}\""
+    "dev": "vite",
+    "check": "tsc",
+    "format": "prettier --write --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,html}\""
   },
   "dependencies": {
     "@pixiv/three-vrm": "^0.6.7",
@@ -21,7 +26,6 @@
   },
   "devDependencies": {
     "@types/three": "^0.133.1",
-    "npm-run-all": "^4.1.5",
     "prettier": "^2.4.1",
     "typescript": "^4.4.4",
     "vite": "^2.6.11",

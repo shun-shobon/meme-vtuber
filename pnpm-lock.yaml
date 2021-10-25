@@ -1,26 +1,39 @@
 lockfileVersion: 5.3
 
-specifiers:
-  '@pixiv/three-vrm': ^0.6.7
-  '@types/three': ^0.133.1
-  npm-run-all: ^4.1.5
-  prettier: ^2.4.1
-  three: ^0.133.1
-  typescript: ^4.4.4
-  vite: ^2.6.11
-  vite-plugin-html: ^2.1.1
+importers:
 
-dependencies:
-  '@pixiv/three-vrm': 0.6.7_8973ce8d442fb7263fee8a48e1c9f4e1
-  three: 0.133.1
+  .:
+    specifiers: {}
 
-devDependencies:
-  '@types/three': 0.133.1
-  npm-run-all: 4.1.5
-  prettier: 2.4.1
-  typescript: 4.4.4
-  vite: 2.6.11
-  vite-plugin-html: 2.1.1_vite@2.6.11
+  client:
+    specifiers:
+      '@pixiv/three-vrm': ^0.6.7
+      '@types/three': ^0.133.1
+      npm-run-all: ^4.1.5
+      prettier: ^2.4.1
+      three: ^0.133.1
+      typescript: ^4.4.4
+      vite: ^2.6.11
+      vite-plugin-html: ^2.1.1
+    dependencies:
+      '@pixiv/three-vrm': 0.6.7_8973ce8d442fb7263fee8a48e1c9f4e1
+      three: 0.133.1
+    devDependencies:
+      '@types/three': 0.133.1
+      npm-run-all: 4.1.5
+      prettier: 2.4.1
+      typescript: 4.4.4
+      vite: 2.6.11
+      vite-plugin-html: 2.1.1_vite@2.6.11
+
+  server:
+    specifiers:
+      prettier: ^2.4.1
+      ws: ^8.2.3
+    dependencies:
+      ws: 8.2.3
+    devDependencies:
+      prettier: 2.4.1
 
 packages:
 
@@ -396,6 +409,7 @@ packages:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -771,8 +785,8 @@ packages:
       path-parse: 1.0.7
     dev: true
 
-  /rollup/2.58.1:
-    resolution: {integrity: sha512-dNhchlN/3k3EKtyPXWdEEI7wiPQ07WInzsklWFm/6dUZspF63nj0O1A9PTsMxbmtQziwnOOl5oR+BgWNjTEYLA==}
+  /rollup/2.58.3:
+    resolution: {integrity: sha512-ei27MSw1KhRur4p87Q0/Va2NAYqMXOX++FNEumMBcdreIRLURKy+cE2wcDJKBn0nfmhP2ZGrJkP1XPO+G8FJQw==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -960,7 +974,7 @@ packages:
       esbuild: 0.13.9
       postcss: 8.3.11
       resolve: 1.20.0
-      rollup: 2.58.1
+      rollup: 2.58.3
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -981,3 +995,16 @@ packages:
     dependencies:
       isexe: 2.0.0
     dev: true
+
+  /ws/8.2.3:
+    resolution: {integrity: sha512-wBuoj1BDpC6ZQ1B7DWQBYVLphPWkm8i9Y0/3YdHjHKHiohOJ1ws+3OccDWtH+PoC9DZD5WOTrJvNbWvjS6JWaA==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+    dev: false

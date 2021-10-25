@@ -1,5 +1,5 @@
 {
-  "name": "meme-server",
+  "name": "meme-vtuber",
   "version": "0.0.0",
   "description": "VTuber web application with JINS MEME",
   "repository": {
@@ -12,16 +12,5 @@
     "url": "https://github.com/shun-shobon/meme-vtuber/issues"
   },
   "homepage": "https://github.com/shun-shobon/meme-vtuber#readme",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "start": "node main.js",
-    "format": "prettier --write --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,html}\""
-  },
-  "dependencies": {
-    "ws": "^8.2.3"
-  },
-  "devDependencies": {
-    "prettier": "^2.4.1"
-  }
+  "private": true
 }
